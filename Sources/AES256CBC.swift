@@ -443,23 +443,23 @@ final private class AESCipher {
             var w: UInt32
 
             w = rk2[r][0]
-            let u1 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
-            let u2 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u1: UInt32 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u2: UInt32 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
             rk2[r][0] = u1 ^ u2
 
             w = rk2[r][1]
-            let u11 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
-            let u12 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u11: UInt32 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u12: UInt32 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
             rk2[r][1] = u11 ^ u12
 
             w = rk2[r][2]
-            let u22 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
-            let u23 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u22: UInt32 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u23: UInt32 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
             rk2[r][2] = u22 ^ u23
 
             w = rk2[r][3]
-            let u33 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
-            let u34 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u33: UInt32 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u34: UInt32 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
             rk2[r][3] = u33 ^ u34
         }
 
